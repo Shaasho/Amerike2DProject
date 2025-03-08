@@ -1,4 +1,6 @@
-public interface IGameApp 
-{ 
-    void StartApp(); 
+using System;
+
+public interface IGameApp : IDisposable
+{
+    void StartApp();
 }

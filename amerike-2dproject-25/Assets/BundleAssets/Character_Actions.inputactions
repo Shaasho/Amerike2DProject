@@ -1,0 +1,34 @@
+{
+    "name": "Character_Actions",
+    "maps": [
+        {
+            "name": "Action_Map",
+            "id": "70833259-3bd3-4348-a24a-f1bd02818f6a",
+            "actions": [
+                {
+                    "name": "Movement",
+                    "type": "Button",
+                    "id": "6f728715-08fd-4917-add0-0bca2e8be9a2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1c5b8d05-bd5c-4a53-b151-06459f090229",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class Gamemanager : MonoBehaviour
 {
-    public GameManager Instance = null;
+    public Gamemanager Instance = null;
     private IGameApp gameApp;
     private void Awake()
     {
@@ -18,5 +19,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnApplicationQuit()
+    {
+        gameApp.Dispose();
     }
 }

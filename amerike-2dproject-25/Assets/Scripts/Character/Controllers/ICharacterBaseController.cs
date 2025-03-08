@@ -1,7 +1,9 @@
+using System;
+
 namespace Character.Controllers
 {
-    public interface ICharacterBaseController
+    public interface ICharacterBaseController : IDisposable
     {
-        void StarCharacter();
+       
     }
 }
