@@ -1,3 +1,4 @@
+﻿using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Utils.Bindings;
@@ -18,26 +19,25 @@ namespace Character.Views
         public Rigidbody2D Rigidbody2D => rb2D;
         public Transform Transform => transform;
        
-        public bool FlipSprite
+       public bool FlipSprite
         {
             get => spriteRenderer.flipX;
             set => spriteRenderer.flipX = value;
         }
 
-        public Vector2 Direction => direction;
-        public void JumpButtonDown()
-        {
-           
-        }
+       public Vector2 Direction => direction;
+       public void JumpButtonDown() => OnJumpButtonDown?.Invoke();
 
-        public int MoveState
-        {
-            set => moveBinding.Value = value;
-        }
+       public int MoveState
+       {
+           set => moveBinding.Value = value;
+       }
 
-        public void SetDirection(InputAction.CallbackContext ctx)
-        {
-            direction = ctx.ReadValue<Vector2>();
-        }
+       public event Action OnJumpButtonDown;
+
+       public void SetDirection(InputAction.CallbackContext ctx)
+       {
+           direction = ctx.ReadValue<Vector2>();
+       }
     }
 }

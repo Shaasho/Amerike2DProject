@@ -1,8 +1,8 @@
-namespace Character.Models
+﻿namespace Character.Models
 {
     public interface ICharacterData
     {
-        float MoveSpeed { get; set; }
-        float JumpForce { get; set; }
+        float MoveSpeed { get; }
+        float JumpForce { get; }
     }
 }
